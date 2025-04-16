@@ -1,125 +1,145 @@
-""<!DOCTYPE html>
-
+<!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jarvis AI Assistant - Mr. Sumit</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jarvis Assistant | Built by Mr. Sumit</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: 'Roboto', sans-serif;
-      margin: 0;
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      color: white;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(135deg, #000000, #1f1f1f);
+      color: #ffffff;
       overflow-x: hidden;
     }
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 30px 20px;
-      animation: fadeIn 2s ease-in-out;
-    }
-    h1 {
+    header {
+      padding: 4rem 2rem 2rem;
       text-align: center;
-      font-size: 3em;
-      color: #00e6e6;
-      margin-bottom: 10px;
-      animation: popUp 1s ease;
+      background: linear-gradient(145deg, #111, #222);
+      animation: slideDown 1.2s ease-out;
+    }
+    header h1 { font-size: 3rem; color: #00ffc3; }
+    header p { font-size: 1.2rem; color: #ccc; margin-top: 1rem; }
+    section {
+      padding: 2.5rem;
+      animation: fadeIn 1.5s ease-in;
     }
     h2 {
-      color: #00ccff;
-      border-bottom: 2px solid #00ccff;
-      padding-bottom: 5px;
-      margin-top: 40px;
+      color: #00ffd5;
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
     }
-    p, li {
-      font-size: 1.1em;
-      line-height: 1.6;
+    .feature {
+      margin-bottom: 1.8rem;
+      padding: 1rem;
+      background: rgba(255,255,255,0.05);
+      border-left: 4px solid #00ffc3;
+      border-radius: 8px;
+      transition: transform 0.3s;
     }
-    ul {
-      padding-left: 20px;
+    .feature:hover { transform: translateX(10px); }
+    .feature strong {
+      display: block;
+      font-size: 1.1rem;
+      color: #ffffff;
     }
-    a {
-      color: #00ffcc;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    footer {
-      text-align: center;
-      margin-top: 50px;
-      font-size: 0.9em;
+    .feature span {
+      display: block;
+      margin-top: 0.3rem;
+      font-size: 0.95rem;
       color: #ccc;
-    }@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes popUp {
-  0% { transform: scale(0.7); opacity: 0; }
-  100% { transform: scale(1); opacity: 1; }
-}
-
-.loop-animation {
-  animation: pulseLoop 3s infinite;
-  font-weight: bold;
-  font-size: 1.3em;
-  text-align: center;
-  color: #00ff99;
-  margin-bottom: 20px;
-}
-
-@keyframes pulseLoop {
-  0%, 100% { transform: scale(1); color: #00ff99; }
-  50% { transform: scale(1.1); color: #ffffff; }
-}
-
+    }
+    .feedback {
+      font-style: italic;
+      margin-bottom: 1rem;
+      color: #bbb;
+    }
+    .contact {
+      background-color: #111;
+      padding: 2rem;
+      text-align: center;
+      animation: fadeInUp 1.5s ease-in;
+    }
+    .contact p {
+      margin: 0.8rem 0;
+      color: #eee;
+    }
+    .footer {
+      text-align: center;
+      font-size: 0.9rem;
+      padding: 1rem;
+      color: #888;
+      border-top: 1px solid #333;
+      margin-top: 2rem;
+    }
+    @keyframes slideDown {
+      0% { transform: translateY(-30px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      0% { transform: translateY(20px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Jarvis AI Assistant</h1>
-    <div class="loop-animation">Created & Sold by Mr. Sumit</div><h2>জার্ভিস কী? (What is Jarvis?)</h2>
-<p>Jarvis হলো একটি পার্সোনাল AI অ্যাসিস্ট্যান্ট যা আপনার ভয়েস কমান্ড অনুযায়ী আপনার কম্পিউটারে বিভিন্ন কাজ করতে পারে।<br>
-<i>Jarvis is a personal AI assistant that can perform various tasks on your computer based on your voice commands.</i></p>
+  <header>
+    <h1>আপনার ব্যক্তিগত AI সহকারী — Jarvis</h1>
+    <p>Always ready. Works only with your voice. / সবসময় প্রস্তুত। শুধুমাত্র আপনার কণ্ঠে কাজ করে।</p>
+  </header>
 
-<h2>ফিচারসমূহ (Features)</h2>
-<ul>
-  <li>শুধু আপনার ভয়েস চিনে কাজ করা (Recognizes and responds only to your voice)</li>
-  <li>বাংলা, হিন্দি ও ইংরেজি ভাষায় কমান্ড বোঝা (Understands commands in Bengali, Hindi & English)</li>
-  <li>কম্পিউটার নিয়ন্ত্রণ (shutdown, open apps ইত্যাদি) (Controls computer functions like shutdown, open apps etc.)</li>
-  <li>Google সার্চ এবং তথ্য আনা (Searches Google and fetches data)</li>
-  <li>WhatsApp-এ রিপ্লাই এবং চ্যাট ওপেন (Replies on WhatsApp and opens chats)</li>
-  <li>YouTube বা Spotify-তে মিউজিক প্লে করা (Plays music via YouTube or Spotify)</li>
-  <li>আপনার সময় বলে দেওয়া (Time by Voice) (Tells you the time through voice)</li>
-</ul>
+  <section>
+    <h2>জারভিস কী? / What is Jarvis?</h2>
+    <div class="feature">
+      <strong>আপনার ব্যক্তিগত AI সহকারী / Your Personal AI Assistant</strong>
+      <span>জারভিস এমন একটি স্মার্ট অ্যাসিস্ট্যান্ট যা আপনার কণ্ঠ চেনে, আপনার ভাষা বোঝে এবং আপনার কমান্ডে কাজ করে। এটি বাংলায়, হিন্দিতে ও ইংরেজিতে কথা বলতে পারে। / Jarvis is a smart assistant that recognizes your voice, understands your language, and follows your commands. It can speak in Bengali, Hindi & English.</span>
+    </div>
+  </section>
 
-<h2>মূল্য (Price)</h2>
-<p>₹৫০০০ মাত্র (Only ₹5000)</p>
+  <section>
+    <h2>জারভিস কি করতে পারে? / What can Jarvis do?</h2>
+    <div class="feature"><strong>১. ভয়েস অথেন্টিকেশন / Voice Authentication</strong><span>শুধু আপনার কণ্ঠে কাজ করে। ৮৫%+ ম্যাচ না হলে কমান্ড নেয় না। / Works only with your voice. 85%+ match required.</span></div>
+    <div class="feature"><strong>২. মাল্টি ল্যাঙ্গুয়েজ সাপোর্ট / Multi-language Support</strong><span>বাংলা, হিন্দি, ইংরেজি চিনে নিয়ে উত্তর দেয়। / Detects Bengali, Hindi & English.</span></div>
+    <div class="feature"><strong>৩. অফলাইন + অনলাইন কমান্ড / Offline + Online Commands</strong><span>ইন্টারনেট ছাড়াও কাজ করে, অনলাইনে আরও স্মার্ট। / Works offline, smarter online.</span></div>
+    <div class="feature"><strong>৪. ইউটিউব গান চালানো / YouTube Music</strong><span>“Hey Jarvis, গান চালাও” বললেই চালু হয়। / Say "Hey Jarvis, play music" and it plays.</span></div>
+    <div class="feature"><strong>৫. গুগল ও উইকিপিডিয়া / Google & Wikipedia</strong><span>সার্চ করে ও পড়ে শোনায়। / Searches and reads aloud.</span></div>
+    <div class="feature"><strong>৬. হোয়াটসঅ্যাপ মেসেজ / WhatsApp Messaging</strong><span>নাম বললেই মেসেজ পাঠায়। / Sends messages with voice command.</span></div>
+    <div class="feature"><strong>৭. স্ক্রিনশট, মাউস-কিবোর্ড কন্ট্রোল / Screenshot, Mouse & Keyboard</strong><span>মাউস সরায়, টাইপ করে। / Controls mouse & types for you.</span></div>
+    <div class="feature"><strong>৮. কম্পিউটার শাটডাউন / PC Shutdown</strong><span>শুধু কণ্ঠে বললেই বন্ধ হয়। / Shuts down with voice command.</span></div>
+    <div class="feature"><strong>৯. টাইম-ডেট ও জোকস / Time, Date & Jokes</strong><span>তারিখ, সময় বলে, জোকস শুনায়। / Tells time, date & makes you laugh.</span></div>
+    <div class="feature"><strong>১০. ফাইল ওপেন ও সফটওয়্যার বন্ধ / File & App Control</strong><span>ফাইল খুলে, সফটওয়্যার বন্ধ করে। / Opens files & closes apps.</span></div>
+  </section>
 
-<h2>আপনি যা যা পাবেন: (What You Get)</h2>
-<ul>
-  <li>একজনের জন্য পার্সোনাল ভার্সন (Personal version for one user)</li>
-  <li>আজীবন ব্যবহার (Lifetime access)</li>
-  <li>আপনার ভয়েসে ট্রেইন করা (Trained to your voice)</li>
-  <li>সহজ ও নিরাপদ ব্যবহারযোগ্য সিস্টেম (Easy and secure to use)</li>
-  <li>বাংলাদেশ এবং ভারতের জন্য উপযুক্ত (Suitable for Bangladesh & India)</li>
-</ul>
+  <section>
+    <h2>মূল্য ও এক্সেস / Pricing & Access</h2>
+    <p><strong>মাত্র ৫০০০ টাকা / Only ৳5000 (One-time)</strong></p>
+    <ul>
+      <li>সম্পূর্ণ কাস্টমাইজড সফটওয়্যার / Fully customized software</li>
+      <li>লাইফটাইম ব্যবহারযোগ্য / Lifetime access</li>
+      <li>আপনার ভয়েস অনুযায়ী ট্রেইনড / Voice-trained for you</li>
+      <li>প্রফেশনাল ইন্সটলেশন গাইড / Professional setup guide</li>
+    </ul>
+  </section>
 
-<h2>যোগাযোগ করুন (Contact)</h2>
-<p>Jarvis কিনতে অথবা বিস্তারিত জানতে যোগাযোগ করুন:<br>
-<i>To buy Jarvis or know more, contact:</i><br>
-<strong>Email: <a href="mailto:ramshree20762@gmail.com">ramshree20762@gmail.com</a></strong></p>
+  <section>
+    <h2>ব্যবহারকারীদের মতামত / What Users Say</h2>
+    <p class="feedback">“এটা এক কথায় অসাধারণ।” — Mou Das</p>
+    <p class="feedback">“জারভিস আমার জীবন সহজ করে দিয়েছে।” — Somnath Sarkar</p>
+  </section>
 
-<p><strong>*দ্রষ্টব্য:*</strong> এখানে কোন কোড বা সফটওয়্যার ডাউনলোড লিঙ্ক দেওয়া হয়নি। শুধুমাত্র অফিশিয়াল চ্যানেল ব্যবহার করে কিনুন।<br>
-<i><strong>*Note:*</strong> No code or download link is provided here. Purchase only through official contact.</i></p>
+  <section class="contact">
+  <h2>যোগাযোগ / Contact</h2>
+  <p><strong>Email:</strong> <a href="mailto:jarvis@yourdomain.com" style="color:#00ffc3;text-decoration:none;">jarvis@yourdomain.com</a></p>
+</section>
 
-<footer>
-  © 2025 Mr. Sumit | Jarvis AI Sales Page
-</footer>
-
+  <div class="footer">
+    Jarvis Assistant — Built by Mr. Sumit | Powered by Python & AI<br>
+    <small>Jarvis Assistant is not affiliated with Marvel or Iron Man.</small>
   </div>
 </body>
-</html>""
+</html>
